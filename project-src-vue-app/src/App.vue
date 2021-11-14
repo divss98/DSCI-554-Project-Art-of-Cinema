@@ -21,6 +21,9 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-image:'url(https://i.redd.it/4fxxbm4opjd31.jpg)';
+  background-color: antiquewhite;
+  
 }
 
 #nav {
@@ -62,8 +65,6 @@
 </style>
 
 <script>
-
-
 // @ is an alias to /src
 import Header from './components/Header'
 export default {
