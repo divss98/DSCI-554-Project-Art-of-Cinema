@@ -1,6 +1,6 @@
 <template>
     <div id = 'app'>
-       <marquee scrollamount=20><h1>ADVENTURE</h1></marquee>
+       <marquee scrollamount=20><h1>COMEDY</h1></marquee>
         <br>
        <div class="container" id="chartbuttons">
        <div style="margin-bottom: 2px;"> 
@@ -60,7 +60,7 @@ var dataset, all, mode;
 var xAxis, yAxis;
 var sort,sortMode;
 
-d3.json("adventure20.json").then(function(data){
+d3.json("comedy20.json").then(function(data){
     dataset = data;
     all = data;
     dataset.sort(function(a, b) { return d3.ascending(a.Series_Title, b.Series_Title); });
@@ -349,7 +349,7 @@ function drawBars() {
         .attr("y", -20)
         .style("baseline-shift", "nomal")
 }
-d3.csv("adventure_top20.csv").then(function(data) {
+d3.csv("comedy_top20.csv").then(function(data) {
     console.log(data)
     var table = d3.select('#table1');
     //head
@@ -399,7 +399,7 @@ var dataset, all, mode;
 var xAxis, yAxis;
 var sort,sortMode;
 
-d3.json("adventure20.json").then(function(data){
+d3.json("comedy20.json").then(function(data){
     dataset = data;
     all = data;
     dataset.sort(function(a, b) { return d3.ascending(a.Series_Title, b.Series_Title); });

@@ -11,7 +11,8 @@
 
       <router-link to="/IntBarAction"><button class = 'btn'>Genre Action</button></router-link> <p/>
 
-      <router-link to="/IntBarAdventure"><button class = 'btn'>Genre Adventure</button></router-link> 
+      <router-link to="/IntBarAdventure"><button class = 'btn'>Genre Adventure</button></router-link><p/>
+       <router-link to="/IntBarComedy"><button class = 'btn'>Genre Comedy</button></router-link>
     </div>
     <router-view/>
   </div>
