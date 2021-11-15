@@ -1,29 +1,17 @@
 <template>
     <div id = 'app'>
-       <marquee scrollamount=20><h1>ADVENTURE</h1></marquee>
+      
         <br>
        <div class="container" id="chartbuttons">
        <div style="margin-bottom: 2px;"> 
-        <input type = "button" v-on:click="myPieA" value = "IMDB Rating" class=" btn btn-dark" style="width: 250px;"> 
-        <input type = "button" v-on:click="myPieCo" value = "Revenue" class=" btn btn-dark" style="width: 250px;"> </div>
+         <h3> Movie Certificate Pie Chart</h3>
+        <input type = "button" v-on:click="myPieA" value = "Action" class=" btn btn-dark" style="width: 250px;"> 
+        <input type = "button" v-on:click="myPieCo" value = "Comedy" class=" btn btn-dark" style="width: 250px;">
+        <input type = "button" v-on:click="myPieD" value = "Drama" class=" btn btn-dark" style="width: 250px;"> 
+        <input type = "button" v-on:click="myPieC" value = "Crime" class=" btn btn-dark" style="width: 250px;"> </div>
         
-        <div class="w-100" style="width: auto;"></div>
-        <div class="col" style="margin-bottom: 2px;"><button style="width: 250px;" type="button" class="btn btn-success" id="rate_descending">Sort descending by value</button> <button style="width: 200px;" type="button" class="btn btn-success" id="rate_ascending">Sort ascending by value</button> <button style="width: 200px;" type="button" class="btn btn-success" id="country_alphabetical">Sort Alphabetically</button> </div>
-
-        <div class="row" style="width: auto;">
-          
-          <div class="col" style="margin-bottom: 2px;">  <button style="width: 100px;" type="button" class="btn btn-success" id="top5">Top 5</button> <button style="width: 100px;" type="button" class="btn btn-success" id="bottom5">Bottom 5</button> <button style="width: 100px;" type="button" class="btn btn-success" id="all10">All 20</button></div>
-
-        </div>
-        <div > <button  style="width: 100px;" type="button" class="btn btn-danger" id="reset">reset</button></div>
-        <div id="chart"></div>
+      <svg id='pies' width='500' height='500'></svg>
       </div>
-    
-
-    <div>
-      <table width="800px" height="400px" id="table1"></table>
-    </div>
-
         </div>
 </template>
 
@@ -41,8 +29,9 @@ name: 'd3Chart',
   },
   methods:{
       myPieA(){
-    var data = { A: 41, PG: 3, R: 16, U: 20, UA: 66 };
-    console.log(data)
+var data = [41,3,16,20, 66 ];
+//A: 41, PG: 3, R: 16, U: 20, UA: 66 
+
 		var svg = d3.select("svg"),
 			width = svg.attr("width"),
 			height = svg.attr("height"),
@@ -58,9 +47,7 @@ name: 'd3Chart',
 		var arc = d3.arc()
 					.innerRadius(0)
 					.outerRadius(radius);
-
-		//Generate groups
-		var arcs = g.selectAll("arc")
+    var arcs = g.selectAll("arc")
 					.data(pie(data))
 					.enter()
 					.append("g")
@@ -75,7 +62,69 @@ name: 'd3Chart',
 },
     myPieCo()
 {
-    var data = [2, 4, 8, 10];
+    var data = [18,6,29,37,21];
+
+		var svg = d3.select("svg"),
+			width = svg.attr("width"),
+			height = svg.attr("height"),
+			radius = Math.min(width, height) / 2,
+			g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+		var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+
+		// Generate the pie
+		var pie = d3.pie();
+
+		// Generate the arcs
+		var arc = d3.arc()
+					.innerRadius(0)
+					.outerRadius(radius);
+    var arcs = g.selectAll("arc")
+					.data(pie(data))
+					.enter()
+					.append("g")
+					.attr("class", "arc")
+
+		//Draw arc paths
+		arcs.append("path")
+			.attr("fill", function(d, i) {
+				return color(i);
+			})
+			.attr("d", arc);
+},
+myPieD(){
+  var data = [55,8,53,55,41];
+
+		var svg = d3.select("svg"),
+			width = svg.attr("width"),
+			height = svg.attr("height"),
+			radius = Math.min(width, height) / 2,
+			g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+		var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+
+		// Generate the pie
+		var pie = d3.pie();
+
+		// Generate the arcs
+		var arc = d3.arc()
+					.innerRadius(0)
+					.outerRadius(radius);
+    var arcs = g.selectAll("arc")
+					.data(pie(data))
+					.enter()
+					.append("g")
+					.attr("class", "arc")
+
+		//Draw arc paths
+		arcs.append("path")
+			.attr("fill", function(d, i) {
+				return color(i);
+			})
+			.attr("d", arc);
+},
+myPieC(){
+  var data = [43,0,21,8,12];
 
 		var svg = d3.select("svg"),
 			width = svg.attr("width"),
@@ -105,8 +154,6 @@ name: 'd3Chart',
 			})
 			.attr("d", arc);
 }
-
-
 
   },
   mounted: function () {
