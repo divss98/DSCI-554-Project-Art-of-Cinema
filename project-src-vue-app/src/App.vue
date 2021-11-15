@@ -7,7 +7,9 @@
  
       <router-link to="/d3chart"><button class = 'btn'>D3 Chart</button></router-link> <p/>
       
-      <router-link to="/MapBox"><button class = 'btn'>MapBox Chart</button></router-link> 
+      <router-link to="/MapBox"><button class = 'btn'>MapBox Chart</button></router-link>  <p/>
+
+      <router-link to="/IntBar"><button class = 'btn'>Interactive Bar Chart</button></router-link> 
     </div>
     <router-view/>
   </div>

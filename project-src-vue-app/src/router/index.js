@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import MapBox from '../views/MapBox.vue'
+import IntBar from '../views/IntBar.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -14,6 +15,11 @@ const routes = [
     path: '/MapBox',
     name: 'Map Box',
     component: MapBox
+  },
+  {
+    path: '/IntBar',
+    name: 'Int Bar',
+    component: IntBar
   },
   
   {
