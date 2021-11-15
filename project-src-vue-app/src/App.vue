@@ -9,7 +9,9 @@
       
       <router-link to="/MapBox"><button class = 'btn'>MapBox Chart</button></router-link>  <p/>
 
-      <router-link to="/IntBarAction"><button class = 'btn'>Genre Action</button></router-link> 
+      <router-link to="/IntBarAction"><button class = 'btn'>Genre Action</button></router-link> <p/>
+
+      <router-link to="/IntBarAdventure"><button class = 'btn'>Genre Adventure</button></router-link> 
     </div>
     <router-view/>
   </div>

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import MapBox from '../views/MapBox.vue'
 import IntBarAction from '../views/IntBarAction.vue'
+import IntBarAdventure from '../views/IntBarAdventure.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -21,7 +22,11 @@ const routes = [
     name: 'Int Bar Action',
     component: IntBarAction
   },
-  
+  {
+    path: '/IntBarAdventure',
+    name: 'Int Bar Adventure',
+    component: IntBarAdventure
+  },
   {
     path: '/d3chart',
     name: 'D3Chart',
