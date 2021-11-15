@@ -238,20 +238,7 @@ function filterBars() {
         .duration(750)
         .attr("x", function (d) { return x(d.Series_Title) + x.bandwidth() / 2; });
 
-    // ENTER.
-    // labels.enter().append("text")
-    //     .attr("x", function (d) { return x(d.Series_Title) + x.bandwidth() / 2; })
-    //     .attr("y", function (d) { return y(d.Gross) + (height - y(d.Gross)) / 2; })
-    //     .style("opacity", 0)
-    //     .transition()
-    //     .duration(750)
-    //     .text(function (d) { return d.Series_Title; })
-    //     .attr("class", "label")
-    //     .attr("x", function (d) { return x(d.Series_Title) + x.bandwidth() / 2; })
-    //     .attr("y", function (d) { return y(d.Gross) + (height - y(d.Gross)) / 2; })
-    //     .style("opacity", 1);
 
-    // EXIT.
     labels.exit()
         .transition()
         .duration(750)
@@ -319,15 +306,6 @@ function drawBars() {
         .attr("width", x.bandwidth())
         .attr("height", function (d) { return height - y(d.IMDB_Rating); });
 
-    // svg.selectAll(".label")
-    //     .data(dataset, function (d) { return d.Series_Title; })
-    //     .enter().append("text")
-    //     .text(function (d) { return d.Series_Title; })
-    //     .attr("class", "label")
-    //     .attr("x", function (d) { return x(d.Series_Title) + x.bandwidth() / 2; })
-    //     .attr("y", function (d) { return y(d.Gross) + (height - y(d.Gross)) / 2; });
-
-    //xAxis;
     xAxis = d3.axisBottom()
         .scale(x);
 
@@ -370,7 +348,35 @@ function drawBars() {
         .attr("x", width/2)
         .attr("y", -20)
         .style("baseline-shift", "nomal")
-}},
+}
+d3.csv("action_top20.csv").then(function(data) {
+    console.log(data)
+    var table = d3.select('#table1');
+    //head
+    var columns = ['Movie', 'RunTime','Director','Star','Overview'];
+    table.append('thead')
+        .append('tr')
+        .style('background', 'gainsboro')
+        .selectAll('td')
+        .data(columns)
+        .enter()
+        .append('td') 
+        .text(function(d) {return d; })
+        .style('font-size', '18px')
+        .style('font-weight', 'bold')
+    //body
+    table.append('tbody')
+      .selectAll('tr')
+      .data(data)
+      .enter()
+      .append('tr')
+      .selectAll('td')
+      .data(function(d) { return [d.Series_Title,d.Runtime,d.Director,d.Star1,d.Overview]; })
+      .enter()
+      .append('td')
+      .text(function(d) { return d; })        
+  });
+},
     myRevenue()
 {
     console.log("Called Reve")
@@ -704,6 +710,7 @@ function drawBars() {
         .attr("y", -20)
         .style("baseline-shift", "nomal")
 }
+
 }
 
   },
