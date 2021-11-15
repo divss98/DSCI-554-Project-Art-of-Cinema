@@ -5,6 +5,7 @@ import MapBox from '../views/MapBox.vue'
 import IntBarAction from '../views/IntBarAction.vue'
 import IntBarAdventure from '../views/IntBarAdventure.vue'
 import IntBarComedy from '../views/IntBarComedy.vue'
+import CertificatePie from '../views/CertificatePie.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -32,6 +33,11 @@ const routes = [
     path: '/IntBarComedy',
     name: 'Int Bar Comedy',
     component: IntBarComedy
+  },
+  {
+    path: '/CertificatePie',
+    name: 'Certificate Pie',
+    component: CertificatePie
   },
   {
     path: '/d3chart',
