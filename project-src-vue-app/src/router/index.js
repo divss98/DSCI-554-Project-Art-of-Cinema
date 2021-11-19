@@ -6,6 +6,7 @@ import IntBarAction from '../views/IntBarAction.vue'
 import IntBarAdventure from '../views/IntBarAdventure.vue'
 import IntBarComedy from '../views/IntBarComedy.vue'
 import CertificatePie from '../views/CertificatePie.vue'
+import TimeLine from '../views/TimeLine.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -13,6 +14,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/TimeLine',
+    name: 'TimeLine',
+    component: TimeLine
   },
   {
     path: '/MapBox',
