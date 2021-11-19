@@ -1,7 +1,7 @@
 <template>
     <div id = "app">
         <link rel="stylesheet" href="https://unpkg.com/d3-milestones/build/d3-milestones.css">
-        <div id="timeline"></div>
+        <div id="timeline" width=100px></div>
         </div>
 </template>
 
