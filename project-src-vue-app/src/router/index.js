@@ -6,6 +6,8 @@ import IntBarAction from '../views/IntBarAction.vue'
 import IntBarAdventure from '../views/IntBarAdventure.vue'
 import IntBarComedy from '../views/IntBarComedy.vue'
 import CertificatePie from '../views/CertificatePie.vue'
+//import Tree from '../views/Tree.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -39,6 +41,11 @@ const routes = [
     name: 'Certificate Pie',
     component: CertificatePie
   },
+  // {
+  //   path: '/Tree',
+  //   name: 'Tree',
+  //   component: Tree
+  // },
   {
     path: '/d3chart',
     name: 'D3Chart',

@@ -9,6 +9,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
+//Vue.LoadScript("https://d3js.org/d3.v3.min.js")
 
 Vue.config.productionTip = false
 
