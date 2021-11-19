@@ -13,9 +13,14 @@
 
       <router-link to="/IntBarAdventure"><button class = 'btn'>Genre Adventure</button></router-link><p/>
        <router-link to="/IntBarComedy"><button class = 'btn'>Genre Comedy</button></router-link><p/>
+<<<<<<< HEAD
        <router-link to="/CertificatePie"><button class = 'btn'>Certificate</button></router-link><p/>
        <router-link to="/Tree"><button class = 'btn'>Interactive Tree</button></router-link>
        
+=======
+       <router-link to="/CertificatePie"><button class = 'btn'>Certificate</button></router-link> <p/>
+       <router-link to="/TimeLine"><button class = 'btn'>TimeLine</button></router-link>
+>>>>>>> 001167ba9544b681cf0d89ed5bd544e930622655
     </div>
     <router-view/>
   </div>

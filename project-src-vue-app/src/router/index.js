@@ -6,8 +6,12 @@ import IntBarAction from '../views/IntBarAction.vue'
 import IntBarAdventure from '../views/IntBarAdventure.vue'
 import IntBarComedy from '../views/IntBarComedy.vue'
 import CertificatePie from '../views/CertificatePie.vue'
+<<<<<<< HEAD
 //import Tree from '../views/Tree.vue'
 
+=======
+import TimeLine from '../views/TimeLine.vue'
+>>>>>>> 001167ba9544b681cf0d89ed5bd544e930622655
 Vue.use(VueRouter)
 
 const routes = [
@@ -15,6 +19,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/TimeLine',
+    name: 'TimeLine',
+    component: TimeLine
   },
   {
     path: '/MapBox',
