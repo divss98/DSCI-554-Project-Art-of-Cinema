@@ -8,7 +8,7 @@
 <script>
 import milestones from "d3-milestones";
 export default {
-  name: "Time Line",
+  name: "TimeLine",
   data() {
   },
   mounted() {
