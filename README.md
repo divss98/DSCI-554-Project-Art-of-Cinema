@@ -4,13 +4,13 @@
 
 <!-- 🎒 Complete to include all the information requested. -->
 
-Team name:
+Team name: Team RAD
 
 Team members:
 
-- Tommy Trojan <tommy@usc.edu>
--
--
+- Rushi Shan <rnshah@usc.edu>
+- Divya Manjunath <divyabha@usc.edu>
+- Aparna Nair <aparnan@usc.edu>
 -
 
 ## Artifacts

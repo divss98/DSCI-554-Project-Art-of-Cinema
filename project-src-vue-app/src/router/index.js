@@ -51,6 +51,11 @@ const routes = [
     name: 'Certificate Pie',
     component: CertificatePie
   },
+  // {
+  //   path: '/Tree',
+  //   name: 'Tree',
+  //   component: Tree
+  // },
   {
     path: '/d3chart',
     name: 'D3Chart',
