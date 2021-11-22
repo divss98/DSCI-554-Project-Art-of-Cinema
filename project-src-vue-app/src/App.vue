@@ -19,7 +19,7 @@
 
        <router-link to="/TimeLine"><button class = 'btn'>TimeLine</button></router-link> <p/>
 
-       <router-link to="/CodePen"><button class = 'btn'>Code Pen</button></router-link> <p/>
+       <router-link to="/Tree"><button class = 'btn'>Tree</button></router-link> <p/>
     </div>
     <router-view/>
   </div>

@@ -7,7 +7,7 @@ import IntBarAdventure from '../views/IntBarAdventure.vue'
 import IntBarComedy from '../views/IntBarComedy.vue'
 import CertificatePie from '../views/CertificatePie.vue'
 import TimeLine from '../views/TimeLine.vue'
-import CodePen from '../views/CodePen.vue'
+import Tree from '../views/Tree.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -22,9 +22,9 @@ const routes = [
     component: TimeLine
   },
   {
-    path: '/CodePen',
-    name: 'Code Pen',
-    component: CodePen
+    path: '/Tree',
+    name: 'Tree',
+    component: Tree
   },
   {
     path: '/MapBox',

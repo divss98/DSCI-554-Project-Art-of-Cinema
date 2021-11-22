@@ -22,16 +22,39 @@ export default {
     createCodePen() {
       var treeData =
   {
-    "name": "Top Level",
+    "name": "Movies",
     "children": [
       { 
-        "name": "Level 2: A",
+        "name": "Action",
         "children": [
-          { "name": "Son of A" },
-          { "name": "Daughter of A" }
+          { "name": "Actor 1" ,
+          "children": [
+          { "name": "Info" },
+          { "name": "Info" }
+        ]
+          },
+          { "name": "Actor 2" }
         ]
       },
-      { "name": "Level 2: B" }
+      { "name": "Comedy",
+        "children": [
+          { "name": "Actor 1" },
+          { "name": "Actor 2" }
+        ]
+      },
+      { "name": "Drama",
+        "children": [
+          { "name": "Actor 1" },
+          { "name": "Actor 2" }
+        ]
+      },
+      { "name": "Romance",
+        "children": [
+          { "name": "Actor 1" },
+          { "name": "Actor 2" }
+        ]
+      }
+      
     ]
   };
 
@@ -221,7 +244,7 @@ function update(source) {
 };
 </script>
 
- <style scoped>
+ <style>
 .node circle {
   fill: #fff;
   stroke: steelblue;
