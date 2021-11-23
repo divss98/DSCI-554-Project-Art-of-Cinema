@@ -8,6 +8,7 @@ import IntBarComedy from '../views/IntBarComedy.vue'
 import CertificatePie from '../views/CertificatePie.vue'
 import TimeLine from '../views/TimeLine.vue'
 import Tree from '../views/Tree.vue'
+import Prop_Symbol_Map from '../views/Prop_Symbol_Map.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -51,11 +52,11 @@ const routes = [
     name: 'Certificate Pie',
     component: CertificatePie
   },
-  // {
-  //   path: '/Tree',
-  //   name: 'Tree',
-  //   component: Tree
-  // },
+  {
+    path: '/Prop_Symbol_Map',
+    name: 'Prop Sybmol Map',
+    component: Prop_Symbol_Map
+  },
   {
     path: '/d3chart',
     name: 'D3Chart',

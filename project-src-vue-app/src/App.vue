@@ -20,6 +20,7 @@
        <router-link to="/TimeLine"><button class = 'btn'>TimeLine</button></router-link> <p/>
 
        <router-link to="/Tree"><button class = 'btn'>Tree</button></router-link> <p/>
+       <router-link to="/Prop_Symbol_Map"><button class = 'btn'>Proportional Symbol Map</button></router-link> 
     </div>
     <router-view/>
   </div>

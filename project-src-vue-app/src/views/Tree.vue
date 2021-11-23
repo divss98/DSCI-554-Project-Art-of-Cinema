@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h2> Interactive Tree Map</h2>
     <div id="codepen"></div>
   </div>
 </template>
@@ -33,7 +34,12 @@ export default {
           { "name": "Info" }
         ]
           },
-          { "name": "Actor 2" }
+          { "name": "Actor 2",
+          "children": [
+          { "name": "Info" },
+          { "name": "Info" }
+        ]
+           }
         ]
       },
       { "name": "Comedy",
