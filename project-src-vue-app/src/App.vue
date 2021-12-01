@@ -1,26 +1,27 @@
-<template>
-  <div id="app" :style="{'background-image':'url(https://i.redd.it/4fxxbm4opjd31.jpg)'}">
+<template >
+  <div id="app" >
     <div id="nav">
       <Header/>
-      
+      <b-button-group>
       <router-link to="/"><button class = 'btn'>Home</button></router-link> <p/>
  
-      <router-link to="/d3chart"><button class = 'btn'>D3 Chart</button></router-link> <p/>
+      <!-- <router-link to="/d3chart"><button class = 'btn'>D3 Chart</button></router-link> <p/> -->
       
-      <router-link to="/MapBox"><button class = 'btn'>MapBox Chart</button></router-link>  <p/>
+      <!-- <router-link to="/MapBox"><button class = 'btn'>MapBox Chart</button></router-link>  <p/> -->
 
-      <router-link to="/IntBarAction"><button class = 'btn'>Genre Action</button></router-link> <p/>
+      <router-link to="/IntBarAction"><button class = 'btn'>D3 Bar : Genre Action</button></router-link> <p/>
 
-      <router-link to="/IntBarAdventure"><button class = 'btn'>Genre Adventure</button></router-link><p/>
+      <router-link to="/IntBarAdventure"><button class = 'btn'>D3 Bar : Genre Adventure</button></router-link><p/>
 
-       <router-link to="/IntBarComedy"><button class = 'btn'>Genre Comedy</button></router-link><p/>
+       <router-link to="/IntBarComedy"><button class = 'btn'>D3 Bar : Genre Comedy</button></router-link><p/>
 
-       <router-link to="/CertificatePie"><button class = 'btn'>Certificate</button></router-link> <p/>
+       <router-link to="/CertificatePie"><button class = 'btn'>Pie Chart : Certificate</button></router-link> <p/>
 
-       <router-link to="/TimeLine"><button class = 'btn'>TimeLine</button></router-link> <p/>
+       <router-link to="/TimeLine"><button class = 'btn'>TimeLine Chart</button></router-link> <p/>
 
-       <router-link to="/Tree"><button class = 'btn'>Tree</button></router-link> <p/>
+       <router-link to="/Tree"><button class = 'btn'>Oscar Tree</button></router-link> <p/>
        <router-link to="/Prop_Symbol_Map"><button class = 'btn'>Proportional Symbol Map</button></router-link> 
+    </b-button-group>
     </div>
     <router-view/>
   </div>
@@ -34,8 +35,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-image:'assets/back.jpg';
-  /* background-color: antiquewhite; */
+  /* background-image:'assets/back.jpg'; */
+  background-color: #fbf4ff;
   
 }
 
@@ -59,7 +60,7 @@
   align-items: center;
   text-align: center;
   -webkit-tap-highlight-color: transparent;
-  background: hsl(141, 73%, 42%);
+  background: #acddde;
   border-radius: 500px;
   border: none;
   font-size: 14px;

@@ -1,8 +1,10 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img alt="Vue logo" src="../assets/icon.jpg" width="400">
     <h1>This is the home page of Art of Cinema</h1>
-    
+    <h2>Now more than ever we need to talk to each other, to listen to each other and understand how we see the world, and cinema is the best medium for doing this. </h2>
+    <h3> ~ Scorsese </h3>
+
   </div>
 </template>
 
