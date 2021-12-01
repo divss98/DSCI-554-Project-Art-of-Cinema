@@ -1,11 +1,8 @@
 <template>
-    <div id = 'app'>
+    <div id = 'app' >
     <h1>
         DSCI 554 Final Project : Art of Cinema
     </h1>
-    
-
-    
     </div>
 </template>
 

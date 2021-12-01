@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :style="{'background-image':'url(https://i.redd.it/4fxxbm4opjd31.jpg)'}">
     <div id="nav">
       <Header/>
       
