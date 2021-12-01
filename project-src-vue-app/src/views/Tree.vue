@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h2> Interactive Tree Map</h2>
+    <h2> And the the Oscar goes too....</h2>
     <div id="codepen"></div>
   </div>
 </template>
@@ -23,45 +23,532 @@ export default {
     createCodePen() {
       var treeData =
   {
-    "name": "Movies",
-    "children": [
-      { 
-        "name": "Action",
+    "name": "Oscar Awards",
+"children": [
+    {
+        "name": "Best Director",
         "children": [
-          { "name": "Actor 1" ,
-          "children": [
-          { "name": "Info" },
-          { "name": "Info" }
+            {
+                "name": "Joel Coen",
+                "children": [
+                    {
+                        "name": "No Country for Old Men"
+                    },
+                    {
+                        "name": "2008"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Roman Polanski",
+                "children": [
+                    {
+                        "name": "The Pianist"
+                    },
+                    {
+                        "name": "2003"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Peter Jackson",
+                "children": [
+                    {
+                        "name": "The Lord of the Rings: Return of the King"
+                    },
+                    {
+                        "name": "2004"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Clint Eastwood",
+                "children": [
+                    {
+                        "name": "Million Dollar Baby"
+                    },
+                    {
+                        "name": "2005"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Ang Lee",
+                "children": [
+                    {
+                        "name": "Brokeback Mountain"
+                    },
+                    {
+                        "name": "2006"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Martin Scorsese",
+                "children": [
+                    {
+                        "name": "The Departed"
+                    },
+                    {
+                        "name": "2007"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Danny Boyle",
+                "children": [
+                    {
+                        "name": "Slumdog Millionaire"
+                    },
+                    {
+                        "name": "2009"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Tom Hooper",
+                "children": [
+                    {
+                        "name": "The King's Speech"
+                    },
+                    {
+                        "name": "2011"
+                    }                
+                ]
+                
+            },
+            
+
+            
         ]
-          },
-          { "name": "Actor 2",
-          "children": [
-          { "name": "Info" },
-          { "name": "Info" }
-        ]
-           }
-        ]
-      },
-      { "name": "Comedy",
+    },
+    {
+        "name": "Best Actor",
         "children": [
-          { "name": "Actor 1" },
-          { "name": "Actor 2" }
+            {
+                "name": "Adrien Brody",
+                "children": [
+                    {
+                        "name": "The Pianist"
+                    },
+                    {
+                        "name": "2003"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Sean Penn",
+                "children": [
+                    {
+                        "name": "Mystic River"
+                    },
+                    {
+                        "name": "2004"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Jamie Foxx",
+                "children": [
+                    {
+                        "name": "Ray"
+                    },
+                    {
+                        "name": "2005"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Philip Seymour Hoffman",
+                "children": [
+                    {
+                        "name": "Capote"
+                    },
+                    {
+                        "name": "2006"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Forest Whitaker",
+                "children": [
+                    {
+                        "name": "The Last King of Scotland"
+                    },
+                    {
+                        "name": "2007"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Daniel Day-Lewis",
+                "children": [
+                    {
+                        "name": "There Will Be Blood"
+                    },
+                    {
+                        "name": "2008"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Sean Penn",
+                "children": [
+                    {
+                        "name": "Milk"
+                    },
+                    {
+                        "name": "2009"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Colin Firth",
+                "children": [
+                    {
+                        "name": ""
+                    },
+                    {
+                        "name": "2011"
+                    }                
+                ]
+                
+            },
+            
+
+            
         ]
-      },
-      { "name": "Drama",
+    },
+
+    {
+        "name": "Best Actress",
         "children": [
-          { "name": "Actor 1" },
-          { "name": "Actor 2" }
+            {
+                "name": "Nicole Kidman",
+                "children": [
+                    {
+                        "name": "The Hours"
+                    },
+                    {
+                        "name": "2003"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Charlize Theron",
+                "children": [
+                    {
+                        "name": "Monster"
+                    },
+                    {
+                        "name": "2004"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Hilary Swank",
+                "children": [
+                    {
+                        "name": "Million Dollar Baby"
+                    },
+                    {
+                        "name": "2005"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Reese Witherspoon",
+                "children": [
+                    {
+                        "name": "Walk the Line"
+                    },
+                    {
+                        "name": "2006"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Helen Mirren",
+                "children": [
+                    {
+                        "name": "The Queen"
+                    },
+                    {
+                        "name": "2007"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Marion Cotillard",
+                "children": [
+                    {
+                        "name": "The Passionate Life of Edith Piaf"
+                    },
+                    {
+                        "name": "2008"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Kate Winslet",
+                "children": [
+                    {
+                        "name": "The Reader"
+                    },
+                    {
+                        "name": "2009"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Natalie Portman",
+                "children": [
+                    {
+                        "name": "Black Swan"
+                    },
+                    {
+                        "name": "2011"
+                    }                
+                ]
+                
+            },
+            
+
+            
         ]
-      },
-      { "name": "Romance",
+    },
+    {
+        "name": "Best Supporting Actor",
         "children": [
-          { "name": "Actor 1" },
-          { "name": "Actor 2" }
+            {
+                "name": "Chris Cooper",
+                "children": [
+                    {
+                        "name": "Adaptation"
+                    },
+                    {
+                        "name": "2003"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Tim Robbins",
+                "children": [
+                    {
+                        "name": "Mystic River"
+                    },
+                    {
+                        "name": "2004"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Morgan Freeman",
+                "children": [
+                    {
+                        "name": "Million Dollar Baby"
+                    },
+                    {
+                        "name": "2005"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "George Clooney",
+                "children": [
+                    {
+                        "name": "Syriana"
+                    },
+                    {
+                        "name": "2006"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Alan Arkin",
+                "children": [
+                    {
+                        "name": "Little Miss Sunshine"
+                    },
+                    {
+                        "name": "2007"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Javier Bardem",
+                "children": [
+                    {
+                        "name": "No Country for Old Men"
+                    },
+                    {
+                        "name": "2008"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Heath Ledger",
+                "children": [
+                    {
+                        "name": "The Dark Knight"
+                    },
+                    {
+                        "name": "2009"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Christian Bale",
+                "children": [
+                    {
+                        "name": "The Fighter"
+                    },
+                    {
+                        "name": "2011"
+                    }                
+                ]
+                
+            },
+            
+
+            
         ]
-      }
-      
-    ]
+    },
+
+        {
+        "name": "Best Supporting Actress",
+        "children": [
+            {
+                "name": "Catherine Zeta-Jones",
+                "children": [
+                    {
+                        "name": "Chicago"
+                    },
+                    {
+                        "name": "2003"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Renee Zellweger",
+                "children": [
+                    {
+                        "name": "Cold Mountain"
+                    },
+                    {
+                        "name": "2004"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Cate Blanchett",
+                "children": [
+                    {
+                        "name": "The Aviator"
+                    },
+                    {
+                        "name": "2005"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Rachel Weisz",
+                "children": [
+                    {
+                        "name": "The Constant Gardener"
+                    },
+                    {
+                        "name": "2006"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Jennifer Hudson",
+                "children": [
+                    {
+                        "name": "Dreamgirls"
+                    },
+                    {
+                        "name": "2007"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Tilda Swinton",
+                "children": [
+                    {
+                        "name": "Michael Clayton"
+                    },
+                    {
+                        "name": "2008"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Penelope Cruz",
+                "children": [
+                    {
+                        "name": "Vicky Cristina Barcelona"
+                    },
+                    {
+                        "name": "2009"
+                    }                
+                ]
+                
+            },
+            {
+                "name": "Melissa Leo",
+                "children": [
+                    {
+                        "name": "The Fighter"
+                    },
+                    {
+                        "name": "2011"
+                    }                
+                ]
+                
+            },
+            
+
+            
+        ]
+    },
+    
+]
   };
 
 // Set the dimensions and margins of the diagram
