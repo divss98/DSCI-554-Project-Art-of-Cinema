@@ -38,3 +38,13 @@ export default {
   }
 };
 </script>
+
+<style>
+#timeline{
+  margin-left: auto;
+  margin-right: auto;
+ width: 1000px;
+ height: 5000px;
+  }
+
+</style>

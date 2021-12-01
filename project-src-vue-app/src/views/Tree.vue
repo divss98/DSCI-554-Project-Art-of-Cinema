@@ -23,7 +23,7 @@ export default {
     createCodePen() {
       var treeData =
   {
-    "name": "Oscar Awards",
+    "name": "Oscars",
 "children": [
     {
         "name": "Best Director",
@@ -666,7 +666,7 @@ function update(source) {
 
   // On exit reduce the node circles size to 0
   nodeExit.select('circle')
-    .attr('r', 1e-6);
+    .attr('r', 1);
 
   // On exit reduce the opacity of text labels
   nodeExit.select('text')
@@ -741,11 +741,11 @@ function update(source) {
 .node circle {
   fill: #fff;
   stroke: steelblue;
-  stroke-width: 3px;
+  stroke-width: 7px;
 }
 
 .node text {
-  font: 12px sans-serif;
+  font: 18px sans-serif;
 }
 
 .link {
