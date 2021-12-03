@@ -1,11 +1,13 @@
 <template>
   <main>
     <div class="text-container">
-      <p>Center: {{ center }}</p>
-      <p>Zoom: {{ zoom }}</p>
+        <div id = "map">
+            </div>
+      <!-- <p>Center: {{ center }}</p>
+      <p>Zoom: {{ zoom }}</p> -->
     </div>
 
-    <div id="map"></div>
+    
   </main>
 </template>
 
@@ -26,8 +28,55 @@ export default {
   },
   methods: {
     createMap() {
-      // instantiate map.  this method runs once after the vue component is mounted to the dom
-      this.map = new mapboxgl.Map({
+    //   mapboxgl.accessToken = 'pk.eyJ1IjoicnVzaGkwMDIzMjQyMyIsImEiOiJja3YwMWV5cHIyNmdoMzBtcGFyczRpMjloIn0.ciCExQmw9cvypesPuA0eLA';
+	// 		const map1 = new mapboxgl.Map({
+	// 			container: 'map2', // container ID
+	// 			style: 'mapbox://styles/mapbox/dark-v10', // style URL
+	// 			center: [-118.284867, 34.02283,], // starting position [lng, lat]
+	// 			zoom: 15 // starting zoom
+	// 		});
+
+    //     map1.on('load', function () {
+	// 			map1.addSource('footprints_source', {
+	// 				type: 'geojson',
+	// 				data: 'footprints.geojson'
+	// 			});
+
+
+	// 			map1.addLayer({
+	// 				'id': 'footprints',
+	// 				'type': 'fill',
+	// 				'source': 'footprints_source',
+	// 				'layout': {},
+	// 				'paint': {
+	// 					'fill-color': [
+    //                         'interpolate',
+    //                         ['linear'],
+    //                         ['get', 'HEIGHT'],
+    //                         0,
+    //                         '#F2F12D',
+    //                         25,
+    //                         '#EED322',
+    //                         50,
+    //                         '#E6B71E',
+    //                         75,
+    //                         '#DA9C20',
+    //                         100,
+    //                         '#CA8323',
+    //                         125,
+    //                         '#B86B25',
+    //                         150,
+    //                         '#A25626'
+    //                         ],
+	// 					'fill-opacity': 0.8
+	// 				}
+	// 			});
+	// 		});
+    //     this.map = map1
+    //     this.map.on()
+
+
+        this.map = new mapboxgl.Map({
         accessToken:
           "pk.eyJ1IjoiYmZyaWVkbHkiLCJhIjoiY2p4bHd1OXdpMGFycDN0bzFiNWR4d2VyNyJ9.3hQjvgyoPoCuRx-Hqr_BFQ",
         container: "map",
@@ -37,15 +86,54 @@ export default {
         zoom: this.zoom,
         hash: true // sets url's hash to #zoom/lat/lng
       });
+
+    
+    this.map.on('load',  () => {
+				this.map.addSource('footprints_source', {
+					type: 'geojson',
+					data: 'footprints.geojson'
+				});
+
+
+				this.map.addLayer({
+					'id': 'footprints',
+					'type': 'fill',
+					'source': 'footprints_source',
+					'layout': {},
+					'paint': {
+						'fill-color': [
+                            'interpolate',
+                            ['linear'],
+                            ['get', 'HEIGHT'],
+                            0,
+                            '#F2F12D',
+                            25,
+                            '#EED322',
+                            50,
+                            '#E6B71E',
+                            75,
+                            '#DA9C20',
+                            100,
+                            '#CA8323',
+                            125,
+                            '#B86B25',
+                            150,
+                            '#A25626'
+                            ],
+						'fill-opacity': 0.8
+					}
+				});
+			});
+
       // set mapbox event listeners to update Vue component data
-      this.map.on("move", () => {
-        // set the vue instance's data.center to the results of the mapbox instance method for getting the center
-        this.center = this.map.getCenter();
-      });
-      this.map.on("zoom", () => {
-        // set the vue instance's data.zoom to the results of the mapbox instance method for getting the zoom
-        this.zoom = this.map.getZoom();
-      });
+    //   this.map.on("move", () => {
+    //     // set the vue instance's data.center to the results of the mapbox instance method for getting the center
+    //     this.center = this.map.getCenter();
+    //   });
+    //   this.map.on("zoom", () => {
+    //     // set the vue instance's data.zoom to the results of the mapbox instance method for getting the zoom
+    //     this.zoom = this.map.getZoom();
+    //   });
     }
   }
 };
@@ -68,3 +156,8 @@ export default {
   margin: 0 auto; /* center text container */
 }
 </style>
+
+
+
+
+

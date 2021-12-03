@@ -56,6 +56,7 @@ export default {
       chartData: null,
     };
   },
+<<<<<<< Updated upstream
   methods: {
     myPieA() {
       // var data = [41,3,16,20, 66 ];
@@ -580,6 +581,143 @@ export default {
           .text((d) => d.data.certificate + ":" + d.data.rate);
       });
     },
+=======
+  methods:{
+      myPieA(){
+var data = [41,3,16,20, 66 ];
+var certi = ['A','PG','R','U','UA'];
+
+console.log(certi);
+//A: 41, PG: 3, R: 16, U: 20, UA: 66 
+
+		var svg = d3.select("svg"),
+			width = svg.attr("width"),
+			height = svg.attr("height"),
+			radius = Math.min(width, height) / 2,
+			g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+		var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+
+		// Generate the pie
+		var pie = d3.pie();
+
+		// Generate the arcs
+		var arc = d3.arc()
+					.innerRadius(0)
+					.outerRadius(radius);
+    var arcs = g.selectAll("arc")
+					.data(pie(data))
+					.enter()
+					.append("g")
+					.attr("class", "arc")
+
+		//Draw arc paths
+		arcs.append("path")
+			.attr("fill", function(d, i) {
+				return color(i);
+			})
+			.attr("d", arc);
+
+		arcs.append('text')
+        
+        .text(certi);
+},
+    myPieCo()
+{
+    var data = [18,6,29,37,21];
+
+		var svg = d3.select("svg"),
+			width = svg.attr("width"),
+			height = svg.attr("height"),
+			radius = Math.min(width, height) / 2,
+			g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+		var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+
+		// Generate the pie
+		var pie = d3.pie();
+
+		// Generate the arcs
+		var arc = d3.arc()
+					.innerRadius(0)
+					.outerRadius(radius);
+    var arcs = g.selectAll("arc")
+					.data(pie(data))
+					.enter()
+					.append("g")
+					.attr("class", "arc")
+
+		//Draw arc paths
+		arcs.append("path")
+			.attr("fill", function(d, i) {
+				return color(i);
+			})
+			.attr("d", arc);
+},
+myPieD(){
+  var data = [55,8,53,55,41];
+
+		var svg = d3.select("svg"),
+			width = svg.attr("width"),
+			height = svg.attr("height"),
+			radius = Math.min(width, height) / 2,
+			g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+		var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+
+		// Generate the pie
+		var pie = d3.pie();
+
+		// Generate the arcs
+		var arc = d3.arc()
+					.innerRadius(0)
+					.outerRadius(radius);
+    var arcs = g.selectAll("arc")
+					.data(pie(data))
+					.enter()
+					.append("g")
+					.attr("class", "arc")
+
+		//Draw arc paths
+		arcs.append("path")
+			.attr("fill", function(d, i) {
+				return color(i);
+			})
+			.attr("d", arc);
+},
+myPieC(){
+  var data = [43,0,21,8,12];
+
+		var svg = d3.select("svg"),
+			width = svg.attr("width"),
+			height = svg.attr("height"),
+			radius = Math.min(width, height) / 2,
+			g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+		var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+
+		// Generate the pie
+		var pie = d3.pie();
+
+		// Generate the arcs
+		var arc = d3.arc()
+					.innerRadius(0)
+					.outerRadius(radius);
+    var arcs = g.selectAll("arc")
+					.data(pie(data))
+					.enter()
+					.append("g")
+					.attr("class", "arc")
+
+		//Draw arc paths
+		arcs.append("path")
+			.attr("fill", function(d, i) {
+				return color(i);
+			})
+			.attr("d", arc);
+}
+
+>>>>>>> Stashed changes
   },
   mounted: function () {
     console.log("mounted");
