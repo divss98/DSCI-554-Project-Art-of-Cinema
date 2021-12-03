@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import MapBox from '../views/MapBox_2.vue'
+import MapBox from '../views/MapBox.vue'
 import IntBarAction from '../views/IntBarAction.vue'
 import IntBarAdventure from '../views/IntBarAdventure.vue'
 import IntBarComedy from '../views/IntBarComedy.vue'
@@ -9,6 +9,7 @@ import CertificatePie from '../views/CertificatePie.vue'
 import TimeLine from '../views/TimeLine.vue'
 import Tree from '../views/Tree.vue'
 import Prop_Symbol_Map from '../views/Prop_Symbol_Map.vue'
+import Language from '../views/Language.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -56,6 +57,11 @@ const routes = [
     path: '/Prop_Symbol_Map',
     name: 'Prop Sybmol Map',
     component: Prop_Symbol_Map
+  },
+  {
+    path: '/Language',
+    name: 'Language',
+    component: Language
   },
   {
     path: '/d3chart',
