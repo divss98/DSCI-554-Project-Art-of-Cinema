@@ -3,7 +3,7 @@
     <h1>
         The Art of Cinema
     </h1>
-    <h4> Lights.Camera.Action. </h4>
+    <h4><i class='fas fa-camera' style='font-size:36px'></i> Lights.Camera.Action! <i class='fas fa-camera' style='font-size:36px'></i> </h4>
     </div>
 </template>
 

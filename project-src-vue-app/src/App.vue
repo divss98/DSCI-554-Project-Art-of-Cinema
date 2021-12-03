@@ -4,19 +4,18 @@
       <Header/>
       <b-button-group>
       <router-link to="/"><button class = 'btn'>Home</button></router-link> <p/>
- 
+      </b-button-group>
+      <br><br>
+      <b-button-group>
       <router-link to="/Language"><button class = 'btn'>Language Distribution</button></router-link> <p/>
-      
-      <router-link to="/MapBox"><button class = 'btn'>Movie Set Locations</button></router-link>  <p/>
-
       <router-link to="/IntBarAction"><button class = 'btn'>Genre Action</button></router-link> <p/>
-
+<router-link to="/IntBarComedy"><button class = 'btn'>Genre Comedy</button></router-link><p/>
       <router-link to="/IntBarAdventure"><button class = 'btn'>Genre Adventure</button></router-link><p/>
 </b-button-group>
 <br>
 <br>
 <b-button-group>
-       <router-link to="/IntBarComedy"><button class = 'btn'>Genre Comedy</button></router-link><p/>
+       <router-link to="/MapBox"><button class = 'btn'>Movie Set Locations</button></router-link>  <p/>
 
        <router-link to="/CertificatePie"><button class = 'btn'>Certificate</button></router-link> <p/>
 
