@@ -7,7 +7,7 @@
  
       <router-link to="/Language"><button class = 'btn'>Language Distribution over the Years</button></router-link> <p/>
       
-      <!-- <router-link to="/MapBox"><button class = 'btn'>MapBox Chart</button></router-link>  <p/> -->
+      <router-link to="/MapBox"><button class = 'btn'>MapBox Chart</button></router-link>  <p/>
 
       <router-link to="/IntBarAction"><button class = 'btn'>D3 Bar : Genre Action</button></router-link> <p/>
 

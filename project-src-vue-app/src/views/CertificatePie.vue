@@ -37,11 +37,11 @@
         />
       </div>
       <div id="tooltip" class="hidden">
-        <p><strong></strong></p>
-        <p><span id="value"></span></p>
+        <p id="words"><strong></strong></p>
+        <p id="words"><span id="value"></span></p>
       </div>
       <svg id="pies" width="500" height="500"></svg>
-      <h5>* all figures in 100's</h5>
+      <h5>* all figures in 10's</h5>
     </div>
   </div>
 </template>
@@ -58,39 +58,7 @@ export default {
   },
   methods: {
     myPieA() {
-      // var data = [41,3,16,20, 66 ];
-      // //var data = [{label:"Category 1",value:25},{label:"Category 2",value:12},{label:"Category 3",value:35},{label:"Category 4",value:30},{label:"Category 5",value:18}];
-      // //A: 41, PG: 3, R: 16, U: 20, UA: 66
-
-      // 		var svg = d3.select("svg"),
-      // 			width = svg.attr("width"),
-      // 			height = svg.attr("height"),
-      // 			radius = Math.min(width, height) / 2,
-      // 			g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-      // 		var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
-
-      // 		// Generate the pie
-      // 		var pie = d3.pie();
-
-      // 		// Generate the arcs
-      // 		var arc = d3.arc()
-      // 					.innerRadius(0)
-      // 					.outerRadius(radius);
-      //     var arcs = g.selectAll("arc")
-      // 					.data(pie(data))
-      // 					.enter()
-      // 					.append("g")
-      // 					.attr("class", "arc")
-
-      // 		//Draw arc paths
-      // 		arcs.append("path")
-      // 			.attr("fill", function(d, i) {
-      // 				return color(i);
-      // 			})
-      // 			.attr("d", arc);
-
-      var slice = {
+       var slice = {
         //a slice of pie
         innerRadius: 0,
         outerRadius: 100,
@@ -160,7 +128,7 @@ export default {
               .attr("stroke-width", 5);
             var x = d3.select(this).select("g.arc > text").text();
 
-            //.select('#tooltip').transition().duration(1).style('opacity', 1).text(d.certificate)
+            //.select('#tooltip').transition().duration(1).style('opacity', 1).text(d.country)
             d3.select("#tooltip")
               .style("left", d.pageX + "px")
               .style("top", d.pageY + "px")
@@ -185,43 +153,6 @@ export default {
       });
     },
     myPieCo() {
-      //   var data = [18, 6, 29, 37, 21];
-
-      //   var svg = d3.select("svg"),
-      //     width = svg.attr("width"),
-      //     height = svg.attr("height"),
-      //     radius = Math.min(width, height) / 2,
-      //     g = svg
-      //       .append("g")
-      //       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-      //   var color = d3.scaleOrdinal([
-      //     "#4daf4a",
-      //     "#377eb8",
-      //     "#ff7f00",
-      //     "#984ea3",
-      //     "#e41a1c",
-      //   ]);
-
-      //   // Generate the pie
-      //   var pie = d3.pie();
-
-      //   // Generate the arcs
-      //   var arc = d3.arc().innerRadius(0).outerRadius(radius);
-      //   var arcs = g
-      //     .selectAll("arc")
-      //     .data(pie(data))
-      //     .enter()
-      //     .append("g")
-      //     .attr("class", "arc");
-
-      //   //Draw arc paths
-      //   arcs
-      //     .append("path")
-      //     .attr("fill", function (d, i) {
-      //       return color(i);
-      //     })
-      //     .attr("d", arc);
       var slice = {
         //a slice of pie
         innerRadius: 0,
@@ -292,7 +223,7 @@ export default {
               .attr("stroke-width", 5);
             var x = d3.select(this).select("g.arc > text").text();
 
-            //.select('#tooltip').transition().duration(1).style('opacity', 1).text(d.certificate)
+            //.select('#tooltip').transition().duration(1).style('opacity', 1).text(d.country)
             d3.select("#tooltip")
               .style("left", d.pageX + "px")
               .style("top", d.pageY + "px")
@@ -317,44 +248,7 @@ export default {
       });
     },
     myPieD() {
-      //   var data = [55, 8, 53, 55, 41];
-
-      //   var svg = d3.select("svg"),
-      //     width = svg.attr("width"),
-      //     height = svg.attr("height"),
-      //     radius = Math.min(width, height) / 2,
-      //     g = svg
-      //       .append("g")
-      //       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-      //   var color = d3.scaleOrdinal([
-      //     "#4daf4a",
-      //     "#377eb8",
-      //     "#ff7f00",
-      //     "#984ea3",
-      //     "#e41a1c",
-      //   ]);
-
-      //   // Generate the pie
-      //   var pie = d3.pie();
-
-      //   // Generate the arcs
-      //   var arc = d3.arc().innerRadius(0).outerRadius(radius);
-      //   var arcs = g
-      //     .selectAll("arc")
-      //     .data(pie(data))
-      //     .enter()
-      //     .append("g")
-      //     .attr("class", "arc");
-
-      //   //Draw arc paths
-      //   arcs
-      //     .append("path")
-      //     .attr("fill", function (d, i) {
-      //       return color(i);
-      //     })
-      //     .attr("d", arc);
-      var slice = {
+       var slice = {
         //a slice of pie
         innerRadius: 0,
         outerRadius: 100,
@@ -424,7 +318,7 @@ export default {
               .attr("stroke-width", 5);
             var x = d3.select(this).select("g.arc > text").text();
 
-            //.select('#tooltip').transition().duration(1).style('opacity', 1).text(d.certificate)
+            //.select('#tooltip').transition().duration(1).style('opacity', 1).text(d.country)
             d3.select("#tooltip")
               .style("left", d.pageX + "px")
               .style("top", d.pageY + "px")
@@ -449,43 +343,36 @@ export default {
       });
     },
     myPieC() {
-      //   var data = [43, 0, 21, 8, 12];
+      // var data = [43,0,21,8,12];
 
-      //   var svg = d3.select("svg"),
-      //     width = svg.attr("width"),
-      //     height = svg.attr("height"),
-      //     radius = Math.min(width, height) / 2,
-      //     g = svg
-      //       .append("g")
-      //       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+      // 	var svg = d3.select("svg"),
+      // 		width = svg.attr("width"),
+      // 		height = svg.attr("height"),
+      // 		radius = Math.min(width, height) / 2,
+      // 		g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-      //   var color = d3.scaleOrdinal([
-      //     "#4daf4a",
-      //     "#377eb8",
-      //     "#ff7f00",
-      //     "#984ea3",
-      //     "#e41a1c",
-      //   ]);
+      // 	var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
 
-      //   // Generate the pie
-      //   var pie = d3.pie();
+      // 	// Generate the pie
+      // 	var pie = d3.pie();
 
-      //   // Generate the arcs
-      //   var arc = d3.arc().innerRadius(0).outerRadius(radius);
-      //   var arcs = g
-      //     .selectAll("arc")
-      //     .data(pie(data))
-      //     .enter()
-      //     .append("g")
-      //     .attr("class", "arc");
+      // 	// Generate the arcs
+      // 	var arc = d3.arc()
+      // 				.innerRadius(0)
+      // 				.outerRadius(radius);
+      //   var arcs = g.selectAll("arc")
+      // 				.data(pie(data))
+      // 				.enter()
+      // 				.append("g")
+      // 				.attr("class", "arc")
 
-      //   //Draw arc paths
-      //   arcs
-      //     .append("path")
-      //     .attr("fill", function (d, i) {
-      //       return color(i);
-      //     })
-      //     .attr("d", arc);
+      // 	//Draw arc paths
+      // 	arcs.append("path")
+      // 		.attr("fill", function(d, i) {
+      // 			return color(i);
+      // 		})
+      // 		.attr("d", arc);
+
       var slice = {
         //a slice of pie
         innerRadius: 0,
@@ -556,7 +443,7 @@ export default {
               .attr("stroke-width", 5);
             var x = d3.select(this).select("g.arc > text").text();
 
-            //.select('#tooltip').transition().duration(1).style('opacity', 1).text(d.certificate)
+            //.select('#tooltip').transition().duration(1).style('opacity', 1).text(d.country)
             d3.select("#tooltip")
               .style("left", d.pageX + "px")
               .style("top", d.pageY + "px")
@@ -593,7 +480,7 @@ export default {
 };
 </script>
 
-<style>
+<style >
 h1,
 h2,
 div {
@@ -624,7 +511,7 @@ text.ylabel {
   font-weight: bold;
   text-anchor: middle;
 }
-p {
+#words {
   font-size: 20px;
   font-weight: bold;
   color: blue;

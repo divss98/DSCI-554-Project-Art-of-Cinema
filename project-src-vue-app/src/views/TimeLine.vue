@@ -47,8 +47,8 @@ export default {
 #timeline{
   margin-left: auto;
   margin-right: auto;
- width: 1200px;
- height: 200px;
+ width: 1000px;
+ height: 200px
   }
 
 </style>

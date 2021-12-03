@@ -1,8 +1,9 @@
 <template>
     <div id = 'app' >
     <h1>
-        DSCI 554 Final Project : Art of Cinema
+        The Art of Cinema
     </h1>
+    <h4> Lights.Camera.Action. </h4>
     </div>
 </template>
 
