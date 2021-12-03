@@ -28,118 +28,174 @@ export default {
   },
   methods: {
     createMap() {
-    //   mapboxgl.accessToken = 'pk.eyJ1IjoicnVzaGkwMDIzMjQyMyIsImEiOiJja3YwMWV5cHIyNmdoMzBtcGFyczRpMjloIn0.ciCExQmw9cvypesPuA0eLA';
-	// 		const map1 = new mapboxgl.Map({
-	// 			container: 'map2', // container ID
-	// 			style: 'mapbox://styles/mapbox/dark-v10', // style URL
-	// 			center: [-118.284867, 34.02283,], // starting position [lng, lat]
-	// 			zoom: 15 // starting zoom
-	// 		});
-
-    //     map1.on('load', function () {
-	// 			map1.addSource('footprints_source', {
-	// 				type: 'geojson',
-	// 				data: 'footprints.geojson'
-	// 			});
-
-
-	// 			map1.addLayer({
-	// 				'id': 'footprints',
-	// 				'type': 'fill',
-	// 				'source': 'footprints_source',
-	// 				'layout': {},
-	// 				'paint': {
-	// 					'fill-color': [
-    //                         'interpolate',
-    //                         ['linear'],
-    //                         ['get', 'HEIGHT'],
-    //                         0,
-    //                         '#F2F12D',
-    //                         25,
-    //                         '#EED322',
-    //                         50,
-    //                         '#E6B71E',
-    //                         75,
-    //                         '#DA9C20',
-    //                         100,
-    //                         '#CA8323',
-    //                         125,
-    //                         '#B86B25',
-    //                         150,
-    //                         '#A25626'
-    //                         ],
-	// 					'fill-opacity': 0.8
-	// 				}
-	// 			});
-	// 		});
-    //     this.map = map1
-    //     this.map.on()
-
-
-        this.map = new mapboxgl.Map({
-        accessToken:
-          "pk.eyJ1IjoiYmZyaWVkbHkiLCJhIjoiY2p4bHd1OXdpMGFycDN0bzFiNWR4d2VyNyJ9.3hQjvgyoPoCuRx-Hqr_BFQ",
-        container: "map",
-        style: "mapbox://styles/mapbox/streets-v11",
-        minzoom: 5,
-        center: this.center, // use initial data as default
-        zoom: this.zoom,
-        hash: true // sets url's hash to #zoom/lat/lng
-      });
-
-    
-    this.map.on('load',  () => {
-				this.map.addSource('footprints_source', {
-					type: 'geojson',
-					data: 'footprints.geojson'
-				});
-
-
-				this.map.addLayer({
-					'id': 'footprints',
-					'type': 'fill',
-					'source': 'footprints_source',
-					'layout': {},
-					'paint': {
-						'fill-color': [
-                            'interpolate',
-                            ['linear'],
-                            ['get', 'HEIGHT'],
-                            0,
-                            '#F2F12D',
-                            25,
-                            '#EED322',
-                            50,
-                            '#E6B71E',
-                            75,
-                            '#DA9C20',
-                            100,
-                            '#CA8323',
-                            125,
-                            '#B86B25',
-                            150,
-                            '#A25626'
-                            ],
-						'fill-opacity': 0.8
-					}
-				});
+      mapboxgl.accessToken = 'pk.eyJ1IjoicnVzaGkwMDIzMjQyMyIsImEiOiJja3YwMWV5cHIyNmdoMzBtcGFyczRpMjloIn0.ciCExQmw9cvypesPuA0eLA';
+	const map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [-77.04, 38.907],
+zoom: 11.15
 			});
-
-      // set mapbox event listeners to update Vue component data
-    //   this.map.on("move", () => {
-    //     // set the vue instance's data.center to the results of the mapbox instance method for getting the center
-    //     this.center = this.map.getCenter();
-    //   });
-    //   this.map.on("zoom", () => {
-    //     // set the vue instance's data.zoom to the results of the mapbox instance method for getting the zoom
-    //     this.zoom = this.map.getZoom();
-    //   });
+map.on('load', () => {
+map.addSource('places', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Make it Mount Pleasant</strong><p>Make it Mount Pleasant is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-77.038659, 38.931567]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Mad Men Season Five Finale Watch Party</strong><p>Head to Lounge 201 (201 Massachusetts Avenue NE) Sunday for a Mad Men Season Five Finale Watch Party, complete with 60s costume contest, Mad Men trivia, and retro food and drink. 8:00-11:00 p.m. $10 general admission, $20 admission and two hour open bar.</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-77.003168, 38.894651]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Big Backyard Beach Bash and Wine Fest</strong><p>EatBar (2761 Washington Boulevard Arlington VA) is throwing a Big Backyard Beach Bash and Wine Fest on Saturday, serving up conch fritters, fish tacos and crab sliders, and Red Apron hot dogs. 12:00-3:00 p.m. $25.</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-77.090372, 38.881189]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Ballston Arts & Crafts Market</strong><p>The Ballston Arts & Crafts Market sets up shop next to the Ballston metro this Saturday for the first of five dates this summer. Nearly 35 artists and crafters will be on hand selling their wares. 10:00-4:00 p.m.</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-77.111561, 38.882342]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+"<strong>Seersucker Bike Ride and Social</strong><p>Feeling dandy? Get fancy, grab your bike, and take part in this year's Seersucker Social bike ride from Dandies and Quaintrelles. After the ride enjoy a lawn party at Hillwood with jazz, cocktails, paper hat-making, and more. 11:00-7:00 p.m.</p>"
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-77.052477, 38.943951]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Capital Pride Parade</strong><p>The annual Capital Pride Parade makes its way through Dupont this Saturday. 4:30 p.m. Free.</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-77.043444, 38.909664]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Muhsinah</strong><p>Jazz-influenced hip hop artist Muhsinah plays the Black Cat (1811 14th Street NW) tonight with Exit Clov and Gods’illa. 9:00 p.m. $12.</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-77.031706, 38.914581]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+"<strong>A Little Night Music</strong><p>The Arlington Players' production of Stephen Sondheim's <em>A Little Night Music</em> comes to the Kogod Cradle at The Mead Center for American Theater (1101 6th Street SW) this weekend and next. 8:00 p.m.</p>"
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-77.020945, 38.878241]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Truckeroo</strong><p>Truckeroo brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-77.007481, 38.876516]
+}
+}
+]
+}
+});
+// Add a layer showing the places.
+map.addLayer({
+'id': 'places',
+'type': 'circle',
+'source': 'places',
+'paint': {
+'circle-color': '#4264fb',
+'circle-radius': 6,
+'circle-stroke-width': 2,
+'circle-stroke-color': '#ffffff'
+}
+});
+ 
+// Create a popup, but don't add it to the map yet.
+const popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', (e) => {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+// Copy coordinates array.
+const coordinates = e.features[0].geometry.coordinates.slice();
+const description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates).setHTML(description).addTo(map);
+});
+ 
+map.on('mouseleave', 'places', () => {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+}); 
     }
   }
 };
 </script>
 
 <style scoped>
+body.mapboxgl-popup {
+max-width: 400px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;}
 #map {
   height: 400px;
   width: 100%;

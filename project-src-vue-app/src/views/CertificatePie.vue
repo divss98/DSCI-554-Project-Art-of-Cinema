@@ -37,8 +37,8 @@
         />
       </div>
       <div id="tooltip" class="hidden">
-        <p><strong></strong></p>
-        <p><span id="value"></span></p>
+        <p id="words"><strong></strong></p>
+        <p id="words"><span id="value"></span></p>
       </div>
       <svg id="pies" width="500" height="500"></svg>
       <h5>* all figures in 10's</h5>
@@ -480,7 +480,7 @@ export default {
 };
 </script>
 
-<style>
+<style >
 h1,
 h2,
 div {
@@ -511,7 +511,7 @@ text.ylabel {
   font-weight: bold;
   text-anchor: middle;
 }
-p {
+#words {
   font-size: 20px;
   font-weight: bold;
   color: blue;
