@@ -41,7 +41,7 @@
         <p><span id="value"></span></p>
       </div>
       <svg id="pies" width="500" height="500"></svg>
-      <h5>* all figures in 100's</h5>
+      <h5>* all figures in 10's</h5>
     </div>
   </div>
 </template>
@@ -56,141 +56,417 @@ export default {
       chartData: null,
     };
   },
-  methods:{
-      myPieA(){
-var data = [41,3,16,20, 66 ];
-var certi = ['A','PG','R','U','UA'];
+  methods: {
+    myPieA() {
+       var slice = {
+        //a slice of pie
+        innerRadius: 0,
+        outerRadius: 100,
+        startAngle: 0,
+        endAngle: Math.PI / 2,
+      };
 
-console.log(certi);
-//A: 41, PG: 3, R: 16, U: 20, UA: 66 
+      var arc = d3.arc();
+      console.log(arc(slice));
 
-		var svg = d3.select("svg"),
-			width = svg.attr("width"),
-			height = svg.attr("height"),
-			radius = Math.min(width, height) / 2,
-			g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+      var svg = d3.select("#pies"),
+        width = +svg.attr("width"),
+        height = +svg.attr("height"),
+        //radius = Math.min(width, height) / 2,
+        g = svg
+          .append("g")
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-		var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+      arc = g.append("path").attr("d", arc(slice)).attr("fill", "red");
 
-		// Generate the pie
-		var pie = d3.pie();
+      d3.csv("action_cert.csv", (d) => {
+        d.rate = +d.rate;
+        return d;
+      }).then((data) => {
+        var svg = d3.select("#pies"),
+          width = +svg.attr("width"),
+          height = +svg.attr("height"),
+          radius = Math.min(width, height) / 2,
+          g = svg
+            .append("g")
+            .attr(
+              "transform",
+              "translate(" + width / 2 + "," + height / 2 + ")"
+            );
 
-		// Generate the arcs
-		var arc = d3.arc()
-					.innerRadius(0)
-					.outerRadius(radius);
-    var arcs = g.selectAll("arc")
-					.data(pie(data))
-					.enter()
-					.append("g")
-					.attr("class", "arc")
+        var color = d3.scaleOrdinal([
+          "#a6cee3",
+          "#1f78b4",
+          "#b2df8a",
+          "#33a02c",
+          "#fb9a99",
+        ]);
 
-		//Draw arc paths
-		arcs.append("path")
-			.attr("fill", function(d, i) {
-				return color(i);
-			})
-			.attr("d", arc);
+        var pie = d3
+          .pie()
+          .value((d) => d.rate)
+          .sort(null)
+          .sortValues(d3.descending);
 
-		arcs.append('text')
-        
-        .text(certi);
-},
-    myPieCo()
-{
-    var data = [18,6,29,37,21];
+        var path = d3.arc().outerRadius(radius).innerRadius(0);
 
-		var svg = d3.select("svg"),
-			width = svg.attr("width"),
-			height = svg.attr("height"),
-			radius = Math.min(width, height) / 2,
-			g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+        var label = d3
+          .arc()
+          .outerRadius(radius - 40)
+          .innerRadius(radius - 40);
 
-		var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+        var arc = g
+          .selectAll(".arc")
+          .data(pie(data))
+          .enter()
+          .append("g")
+          .attr("class", "arc")
+          .on("mouseover", function (d) {
+            d3.select(this)
+              .select("path")
+              .attr("stroke", "black")
+              .attr("stroke-width", 5);
+            var x = d3.select(this).select("g.arc > text").text();
 
-		// Generate the pie
-		var pie = d3.pie();
+            //.select('#tooltip').transition().duration(1).style('opacity', 1).text(d.country)
+            d3.select("#tooltip")
+              .style("left", d.pageX + "px")
+              .style("top", d.pageY + "px")
+              .style("opacity", 1)
+              .select("#value")
+              .text(x);
+          })
+          .on("mouseout", function () {
+            d3.select(this).select("path").attr("stroke-width", 0);
+            d3.select("#tooltip").style("opacity", 0);
+          });
+        arc
+          .append("path")
+          .attr("d", path)
+          .attr("fill", (d) => color(d.data.rate));
 
-		// Generate the arcs
-		var arc = d3.arc()
-					.innerRadius(0)
-					.outerRadius(radius);
-    var arcs = g.selectAll("arc")
-					.data(pie(data))
-					.enter()
-					.append("g")
-					.attr("class", "arc")
+        arc
+          .append("text")
+          .attr("transform", (d) => "translate(" + label.centroid(d) + ")")
+          .attr("class", "pies")
+          .text((d) => d.data.certificate + ":" + d.data.rate);
+      });
+    },
+    myPieCo() {
+      var slice = {
+        //a slice of pie
+        innerRadius: 0,
+        outerRadius: 100,
+        startAngle: 0,
+        endAngle: Math.PI / 2,
+      };
 
-		//Draw arc paths
-		arcs.append("path")
-			.attr("fill", function(d, i) {
-				return color(i);
-			})
-			.attr("d", arc);
-},
-myPieD(){
-  var data = [55,8,53,55,41];
+      var arc = d3.arc();
+      console.log(arc(slice));
 
-		var svg = d3.select("svg"),
-			width = svg.attr("width"),
-			height = svg.attr("height"),
-			radius = Math.min(width, height) / 2,
-			g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+      var svg = d3.select("#pies"),
+        width = +svg.attr("width"),
+        height = +svg.attr("height"),
+        //radius = Math.min(width, height) / 2,
+        g = svg
+          .append("g")
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-		var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+      arc = g.append("path").attr("d", arc(slice)).attr("fill", "red");
 
-		// Generate the pie
-		var pie = d3.pie();
+      d3.csv("comedy_cert.csv", (d) => {
+        d.rate = +d.rate;
+        return d;
+      }).then((data) => {
+        var svg = d3.select("#pies"),
+          width = +svg.attr("width"),
+          height = +svg.attr("height"),
+          radius = Math.min(width, height) / 2,
+          g = svg
+            .append("g")
+            .attr(
+              "transform",
+              "translate(" + width / 2 + "," + height / 2 + ")"
+            );
 
-		// Generate the arcs
-		var arc = d3.arc()
-					.innerRadius(0)
-					.outerRadius(radius);
-    var arcs = g.selectAll("arc")
-					.data(pie(data))
-					.enter()
-					.append("g")
-					.attr("class", "arc")
+        var color = d3.scaleOrdinal([
+          "#a6cee3",
+          "#1f78b4",
+          "#b2df8a",
+          "#33a02c",
+          "#fb9a99",
+        ]);
 
-		//Draw arc paths
-		arcs.append("path")
-			.attr("fill", function(d, i) {
-				return color(i);
-			})
-			.attr("d", arc);
-},
-myPieC(){
-  var data = [43,0,21,8,12];
+        var pie = d3
+          .pie()
+          .value((d) => d.rate)
+          .sort(null)
+          .sortValues(d3.descending);
 
-		var svg = d3.select("svg"),
-			width = svg.attr("width"),
-			height = svg.attr("height"),
-			radius = Math.min(width, height) / 2,
-			g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+        var path = d3.arc().outerRadius(radius).innerRadius(0);
 
-		var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+        var label = d3
+          .arc()
+          .outerRadius(radius - 40)
+          .innerRadius(radius - 40);
 
-		// Generate the pie
-		var pie = d3.pie();
+        var arc = g
+          .selectAll(".arc")
+          .data(pie(data))
+          .enter()
+          .append("g")
+          .attr("class", "arc")
+          .on("mouseover", function (d) {
+            d3.select(this)
+              .select("path")
+              .attr("stroke", "black")
+              .attr("stroke-width", 5);
+            var x = d3.select(this).select("g.arc > text").text();
 
-		// Generate the arcs
-		var arc = d3.arc()
-					.innerRadius(0)
-					.outerRadius(radius);
-    var arcs = g.selectAll("arc")
-					.data(pie(data))
-					.enter()
-					.append("g")
-					.attr("class", "arc")
+            //.select('#tooltip').transition().duration(1).style('opacity', 1).text(d.country)
+            d3.select("#tooltip")
+              .style("left", d.pageX + "px")
+              .style("top", d.pageY + "px")
+              .style("opacity", 1)
+              .select("#value")
+              .text(x);
+          })
+          .on("mouseout", function () {
+            d3.select(this).select("path").attr("stroke-width", 0);
+            d3.select("#tooltip").style("opacity", 0);
+          });
+        arc
+          .append("path")
+          .attr("d", path)
+          .attr("fill", (d) => color(d.data.rate));
 
-		//Draw arc paths
-		arcs.append("path")
-			.attr("fill", function(d, i) {
-				return color(i);
-			})
-			.attr("d", arc);
-}
+        arc
+          .append("text")
+          .attr("transform", (d) => "translate(" + label.centroid(d) + ")")
+          .attr("class", "pies")
+          .text((d) => d.data.certificate + ":" + d.data.rate);
+      });
+    },
+    myPieD() {
+       var slice = {
+        //a slice of pie
+        innerRadius: 0,
+        outerRadius: 100,
+        startAngle: 0,
+        endAngle: Math.PI / 2,
+      };
 
+      var arc = d3.arc();
+      console.log(arc(slice));
+
+      var svg = d3.select("#pies"),
+        width = +svg.attr("width"),
+        height = +svg.attr("height"),
+        //radius = Math.min(width, height) / 2,
+        g = svg
+          .append("g")
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+      arc = g.append("path").attr("d", arc(slice)).attr("fill", "red");
+
+      d3.csv("drama_cert.csv", (d) => {
+        d.rate = +d.rate;
+        return d;
+      }).then((data) => {
+        var svg = d3.select("#pies"),
+          width = +svg.attr("width"),
+          height = +svg.attr("height"),
+          radius = Math.min(width, height) / 2,
+          g = svg
+            .append("g")
+            .attr(
+              "transform",
+              "translate(" + width / 2 + "," + height / 2 + ")"
+            );
+
+        var color = d3.scaleOrdinal([
+          "#a6cee3",
+          "#1f78b4",
+          "#b2df8a",
+          "#33a02c",
+          "#fb9a99",
+        ]);
+
+        var pie = d3
+          .pie()
+          .value((d) => d.rate)
+          .sort(null)
+          .sortValues(d3.descending);
+
+        var path = d3.arc().outerRadius(radius).innerRadius(0);
+
+        var label = d3
+          .arc()
+          .outerRadius(radius - 40)
+          .innerRadius(radius - 40);
+
+        var arc = g
+          .selectAll(".arc")
+          .data(pie(data))
+          .enter()
+          .append("g")
+          .attr("class", "arc")
+          .on("mouseover", function (d) {
+            d3.select(this)
+              .select("path")
+              .attr("stroke", "black")
+              .attr("stroke-width", 5);
+            var x = d3.select(this).select("g.arc > text").text();
+
+            //.select('#tooltip').transition().duration(1).style('opacity', 1).text(d.country)
+            d3.select("#tooltip")
+              .style("left", d.pageX + "px")
+              .style("top", d.pageY + "px")
+              .style("opacity", 1)
+              .select("#value")
+              .text(x);
+          })
+          .on("mouseout", function () {
+            d3.select(this).select("path").attr("stroke-width", 0);
+            d3.select("#tooltip").style("opacity", 0);
+          });
+        arc
+          .append("path")
+          .attr("d", path)
+          .attr("fill", (d) => color(d.data.rate));
+
+        arc
+          .append("text")
+          .attr("transform", (d) => "translate(" + label.centroid(d) + ")")
+          .attr("class", "pies")
+          .text((d) => d.data.certificate + ":" + d.data.rate);
+      });
+    },
+    myPieC() {
+      // var data = [43,0,21,8,12];
+
+      // 	var svg = d3.select("svg"),
+      // 		width = svg.attr("width"),
+      // 		height = svg.attr("height"),
+      // 		radius = Math.min(width, height) / 2,
+      // 		g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+      // 	var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+
+      // 	// Generate the pie
+      // 	var pie = d3.pie();
+
+      // 	// Generate the arcs
+      // 	var arc = d3.arc()
+      // 				.innerRadius(0)
+      // 				.outerRadius(radius);
+      //   var arcs = g.selectAll("arc")
+      // 				.data(pie(data))
+      // 				.enter()
+      // 				.append("g")
+      // 				.attr("class", "arc")
+
+      // 	//Draw arc paths
+      // 	arcs.append("path")
+      // 		.attr("fill", function(d, i) {
+      // 			return color(i);
+      // 		})
+      // 		.attr("d", arc);
+
+      var slice = {
+        //a slice of pie
+        innerRadius: 0,
+        outerRadius: 100,
+        startAngle: 0,
+        endAngle: Math.PI / 2,
+      };
+
+      var arc = d3.arc();
+      console.log(arc(slice));
+
+      var svg = d3.select("#pies"),
+        width = +svg.attr("width"),
+        height = +svg.attr("height"),
+        //radius = Math.min(width, height) / 2,
+        g = svg
+          .append("g")
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+      arc = g.append("path").attr("d", arc(slice)).attr("fill", "red");
+
+      d3.csv("crime_cert.csv", (d) => {
+        d.rate = +d.rate;
+        return d;
+      }).then((data) => {
+        var svg = d3.select("#pies"),
+          width = +svg.attr("width"),
+          height = +svg.attr("height"),
+          radius = Math.min(width, height) / 2,
+          g = svg
+            .append("g")
+            .attr(
+              "transform",
+              "translate(" + width / 2 + "," + height / 2 + ")"
+            );
+
+        var color = d3.scaleOrdinal([
+          "#a6cee3",
+          "#1f78b4",
+          "#b2df8a",
+          "#33a02c",
+          "#fb9a99",
+        ]);
+
+        var pie = d3
+          .pie()
+          .value((d) => d.rate)
+          .sort(null)
+          .sortValues(d3.descending);
+
+        var path = d3.arc().outerRadius(radius).innerRadius(0);
+
+        var label = d3
+          .arc()
+          .outerRadius(radius - 40)
+          .innerRadius(radius - 40);
+
+        var arc = g
+          .selectAll(".arc")
+          .data(pie(data))
+          .enter()
+          .append("g")
+          .attr("class", "arc")
+          .on("mouseover", function (d) {
+            d3.select(this)
+              .select("path")
+              .attr("stroke", "black")
+              .attr("stroke-width", 5);
+            var x = d3.select(this).select("g.arc > text").text();
+
+            //.select('#tooltip').transition().duration(1).style('opacity', 1).text(d.country)
+            d3.select("#tooltip")
+              .style("left", d.pageX + "px")
+              .style("top", d.pageY + "px")
+              .style("opacity", 1)
+              .select("#value")
+              .text(x);
+          })
+          .on("mouseout", function () {
+            d3.select(this).select("path").attr("stroke-width", 0);
+            d3.select("#tooltip").style("opacity", 0);
+          });
+        arc
+          .append("path")
+          .attr("d", path)
+          .attr("fill", (d) => color(d.data.rate));
+
+        arc
+          .append("text")
+          .attr("transform", (d) => "translate(" + label.centroid(d) + ")")
+          .attr("class", "pies")
+          .text((d) => d.data.certificate + ":" + d.data.rate);
+      });
+    },
   },
   mounted: function () {
     console.log("mounted");
