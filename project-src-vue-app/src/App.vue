@@ -5,22 +5,22 @@
       <b-button-group>
       <router-link to="/"><button class = 'btn'>Home</button></router-link> <p/>
  
-      <!-- <router-link to="/d3chart"><button class = 'btn'>D3 Chart</button></router-link> <p/> -->
+      <router-link to="/Language"><button class = 'btn'>Language Distribution over the Years</button></router-link> <p/>
       
       <!-- <router-link to="/MapBox"><button class = 'btn'>MapBox Chart</button></router-link>  <p/> -->
 
-      <router-link to="/IntBarAction"><button class = 'btn'>Action</button></router-link> <p/>
+      <router-link to="/IntBarAction"><button class = 'btn'>D3 Bar : Genre Action</button></router-link> <p/>
 
-      <router-link to="/IntBarAdventure"><button class = 'btn'>Adventure</button></router-link><p/>
+      <router-link to="/IntBarAdventure"><button class = 'btn'>D3 Bar : Genre Adventure</button></router-link><p/>
 
-       <router-link to="/IntBarComedy"><button class = 'btn'>Comedy</button></router-link><p/>
+       <router-link to="/IntBarComedy"><button class = 'btn'>D3 Bar : Genre Comedy</button></router-link><p/>
 
-       <router-link to="/CertificatePie"><button class = 'btn'>Movie Certificate Distribution</button></router-link> <p/>
+       <router-link to="/CertificatePie"><button class = 'btn'>Pie Chart : Certificate</button></router-link> <p/>
 
-       <router-link to="/TimeLine"><button class = 'btn'>Era Timeline</button></router-link> <p/>
+       <router-link to="/TimeLine"><button class = 'btn'>TimeLine Chart</button></router-link> <p/>
 
-       <router-link to="/Tree"><button class = 'btn'>Oscar Awards History</button></router-link> <p/>
-       <router-link to="/Prop_Symbol_Map"><button class = 'btn'>Movie Distribution Chart</button></router-link> 
+       <router-link to="/Tree"><button class = 'btn'>Oscar Tree</button></router-link> <p/>
+       <router-link to="/Prop_Symbol_Map"><button class = 'btn'>Proportional Symbol Map</button></router-link> 
     </b-button-group>
     </div>
     <router-view/>
