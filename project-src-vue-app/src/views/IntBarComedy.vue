@@ -710,10 +710,10 @@ function drawBars() {
     console.log('mounted');
     
     if (!this.$store.state.htmlChartData) {
-        this.myRating();
+        this.myRevenue();
         
     } else {
-      this.myRating();
+      this.myRevenue();
     }
   }
 

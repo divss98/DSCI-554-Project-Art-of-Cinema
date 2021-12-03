@@ -1,7 +1,11 @@
 <template>
     <div id = "app">
         <link rel="stylesheet" href="https://unpkg.com/d3-milestones/build/d3-milestones.css">
+        <h1> Eras of Cinema </h1>
+        <br>
         <div id="timeline" width=100px></div>
+        <marquee scrollamount=20>
+        <img src="../assets/reel1.jpg" width="100%" height="150px"></marquee>
         </div>
 </template>
 
@@ -43,8 +47,8 @@ export default {
 #timeline{
   margin-left: auto;
   margin-right: auto;
- width: 1000px;
- height: 5000px;
+ width: 1200px;
+ height: 200px;
   }
 
 </style>
