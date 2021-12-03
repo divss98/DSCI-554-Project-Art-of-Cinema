@@ -1,16 +1,11 @@
 <template>
     <div id = "app">
         <link rel="stylesheet" href="https://unpkg.com/d3-milestones/build/d3-milestones.css">
-<<<<<<< Updated upstream
         <h1> Eras of Cinema </h1>
         <br>
         <div id="timeline" width=100px></div>
         <marquee scrollamount=20>
         <img src="../assets/reel1.jpg" width="100%" height="150px"></marquee>
-=======
-        <div id="timeline" width=100 height = 200px></div>
-        <img alt="Vue logo" src="../assets/back.jpg">
->>>>>>> Stashed changes
         </div>
 </template>
 
@@ -52,13 +47,8 @@ export default {
 #timeline{
   margin-left: auto;
   margin-right: auto;
-<<<<<<< Updated upstream
- width: 1200px;
- height: 200px;
-=======
  width: 1000px;
  height: 200px
->>>>>>> Stashed changes
   }
 
 </style>
