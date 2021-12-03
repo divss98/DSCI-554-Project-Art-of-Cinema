@@ -1,7 +1,7 @@
 <template>
     <div id = 'app'>
        
-		<div>
+		<div id='but'>
             <span class="btn" id="dataset1">1950</span>
 			<span class="btn" id="dataset2">1960</span>
 			<span class="btn" id="dataset3">1970</span>
@@ -14,13 +14,13 @@
             
             
             
-            
+    
             
             
             
             
 		</div>
-		<svg width="1000" height="200" style="background-color: #ddd" id="svg"></svg>
+		<svg width="1000" height="200" style="background-color: #ddd" id="sv"></svg>
         </div>
 </template>
 
@@ -204,11 +204,11 @@ name: 'd3Chart',
             
             
             
-                d3.select('#svg')
+                d3.select('#sv')
 				.on('click', function () {
 					update(dataset1); //reset
 				});
-                var svg = d3.select('#svg');
+                var svg = d3.select('#sv');
                 var langs=[['ENGLISH'],['FRENCH'],['ITALIAN'],['JAPANESE'],['RUSSIAN'],['SPANISH'],['SWEDISH']]
                 var x = d3.scaleBand();
 		
@@ -231,7 +231,7 @@ name: 'd3Chart',
 			function update(data) {
                 
                 console.log(data[0].key)
-				var svg = d3.select('#svg');
+				var svg = d3.select('#sv');
 				var rects = svg.selectAll('rect')
 					.data(data, function (d) {
 						return d.key;
@@ -308,7 +308,7 @@ name: 'd3Chart',
 }
 </script>
 
-<style>
+<style scoped>
         .axis0 line,
         .axis0 path {
             fill: none;
@@ -335,10 +335,10 @@ name: 'd3Chart',
             text-align: left;
             display: inline-block;
         }
-        div{
+        #but{
             margin-left: 100px;
         }
-        svg{
+        #sv{
             margin-left: 100px;
             
         }

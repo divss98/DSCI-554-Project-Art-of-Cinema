@@ -5,19 +5,22 @@
       <b-button-group>
       <router-link to="/"><button class = 'btn'>Home</button></router-link> <p/>
  
-      <router-link to="/Language"><button class = 'btn'>Language Distribution over the Years</button></router-link> <p/>
+      <router-link to="/Language"><button class = 'btn'>Language Distribution</button></router-link> <p/>
       
-      <router-link to="/MapBox"><button class = 'btn'>MapBox Chart</button></router-link>  <p/>
+      <router-link to="/MapBox"><button class = 'btn'>Movie Set Locations</button></router-link>  <p/>
 
-      <router-link to="/IntBarAction"><button class = 'btn'>D3 Bar : Genre Action</button></router-link> <p/>
+      <router-link to="/IntBarAction"><button class = 'btn'>Genre Action</button></router-link> <p/>
 
-      <router-link to="/IntBarAdventure"><button class = 'btn'>D3 Bar : Genre Adventure</button></router-link><p/>
+      <router-link to="/IntBarAdventure"><button class = 'btn'>Genre Adventure</button></router-link><p/>
+</b-button-group>
+<br>
+<br>
+<b-button-group>
+       <router-link to="/IntBarComedy"><button class = 'btn'>Genre Comedy</button></router-link><p/>
 
-       <router-link to="/IntBarComedy"><button class = 'btn'>D3 Bar : Genre Comedy</button></router-link><p/>
+       <router-link to="/CertificatePie"><button class = 'btn'>Certificate</button></router-link> <p/>
 
-       <router-link to="/CertificatePie"><button class = 'btn'>Pie Chart : Certificate</button></router-link> <p/>
-
-       <router-link to="/TimeLine"><button class = 'btn'>TimeLine Chart</button></router-link> <p/>
+       <router-link to="/TimeLine"><button class = 'btn'>Movie Eras</button></router-link> <p/>
 
        <router-link to="/Tree"><button class = 'btn'>Oscar Tree</button></router-link> <p/>
        <router-link to="/Prop_Symbol_Map"><button class = 'btn'>Proportional Symbol Map</button></router-link> 
@@ -54,16 +57,16 @@
   color: #42b983;
 }
 .btn{
-      padding: 16px 48px 18px 48px;
+      padding: 15px 35px 15px 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   -webkit-tap-highlight-color: transparent;
-  background: #acddde;
+  background: goldenrod;
   border-radius: 500px;
   border: none;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 14px;
   font-weight: 800;
   letter-spacing: 2px;
