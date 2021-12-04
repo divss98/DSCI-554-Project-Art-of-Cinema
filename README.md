@@ -20,7 +20,7 @@ Team members:
 - Final presentation: [Transcript](presentation/TRANSCRIPT.md) | [slides](presentation/presentation.pdf)
 - Paper: [Overleaf read-only link](https://www.overleaf.com/read/ksbwncwftsvq) | [PDF](paper/paper.pdf)
 - [Demo link](demo/dist/)
-- Video [Transcript](video/TRANSCRIPT.md) | [YouTube link]()
+- Video [Transcript](video/TRANSCRIPT.md) | [YouTube link](https://youtu.be/hl5p8Rft0wo)
 
 
 ## Project Summary
@@ -100,7 +100,7 @@ The three of us split the creation of charts amongst ourselves and constantly te
 |Timeline |Timeline to represent the different eras of cinema   | d3   | layout |
 |Proportional Symbol Map |Symbol Map to represent top 20 regions with most movies released |d3. topojson   | map  |
 |Oscar Winners |Tree Graph represents oscar winners from different categories from 2003 - 2011|d3, d3 hierarchy|layout|
-|Movie Set Locations |Location of different movies/tv shows in and around Los Angeles  | d3,mapbox,geojson   | mapboc |
+|Movie Set Locations |Location of different movies/tv shows in and around Los Angeles  | d3,mapbox,geojson   | mapbox |
 ## Summary table of visualization forms used
 
 <!-- 🎒 Complete the table . -->
