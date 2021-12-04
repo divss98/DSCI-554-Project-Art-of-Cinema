@@ -42,29 +42,29 @@ All the other charts were equally divided amongst all of us and we created them 
 
 ## Proposal presentation
 
-- Divya designed the presentation and created the intro slides 
-- Aparna was responsible for researching for interesting visuals for the proposal presentation and oversaw tbe literature review.
-- Rushi was responsible for searching for appropriate frameworks and creating time line.
+- Divya designed the presentation and created the introduction slides 
+- Aparna was responsible for researching interesting visuals for the proposal presentation and oversaw the literature review.
+- Rushi was responsible for searching for appropriate frameworks and creating timeline.
 
 ## Final presentation
 
-- Rushi created/presented the slides about the idea,motivation and introduction of the project.
-- Aparna created/presented the slides about previous work done, the data and originality of the project.
-- Divya created/presented the slides regarding design methodology, D3 charts and future scope of the project.
+- Rushi created/presented the slides on idea, motivation and introduction.
+- Aparna created/presented the slides on previous work done, the data and originality of the project.
+- Divya created/presented the slides on design methodology, D3 charts and future scope of the project.
 
 ## Paper
 
 
-- Divya wrote the Introduction and Data Section as she was most familiar with data used. SHe also highlighted the main features in the app.
+- Divya wrote the Introduction and Data Section as she was most familiar with data used. She also highlighted the main features of the app.
 - Aparna was responsible for writing the Related Work section and general formatting of the paper.
 - Rushi handled the System and Design Approaches in the paper.
 
 ## Demo
 
-[Tommy Trojan](mailto:tommy@usc.edu)
 
-- Divya was responsible for D3 layout and Mapbox map as well aggregating the data for smooth implementation of all charts.
-- Aparna handled the  Animated chart and researched for background colors, and images which could make our website interesting. She handled the UI.
+
+- Divya was responsible for D3 layout and Mapbox map. She also aggregated the data for smooth implementation of all charts.
+- Aparna handled the Animated chart and researched for background colors, and images which could make our website interesting. She handled the UI.
 - Rushi implemented the framework and dealt with Interactive Pie and Proportional Symbol map chart.
 
 The three of us split the creation of charts amongst ourselves and constantly tested it on our Web app to make sure its running as expected.
@@ -89,24 +89,27 @@ The three of us split the creation of charts amongst ourselves and constantly te
 
 <!-- 🎒 Complete the table using the Label of the required visualizations. -->
 
-| Page name | Chart description | Libraries used | Requirement label |
-| --------- | ----------------- | -------------- | ----------------- |
-| Home page | main map          | d3, topojson   | map               |
-|           |                   |                |                   |
-|           |                   |                |                   |
-|           |                   |                |                   |
-|           |                   |                |                   |
-|           |                   |                |                   |
-
+| Page name | Chart description          | Libraries used | Requirement label |
+| --------- | -----------------          | -------------- | ----------------- |
+| Home page | Bootstrap button layout    | bootstrap   |               |
+| Language Distribution |Animated Bar Chart  |d3 | animated |
+| Genre Action  |Rating & Revenue Bar Chart (filter/sort available)   |d3  | responsive, interactive  |
+| Genre Adventure          |Rating & Revenue Bar Chart (filter/sort available) |d3   | responsive, interactive                    |
+|Genre Comedy  |Rating & Revenue Bar Chart (filter/sort available)  |d3  | responsive, interactive   |
+|Movie Certification |Pie Chart displays distribution of movies per certificate |d3 |responsive, interactive |
+|Timeline |Timeline to represent the different eras of cinema   | d3   | layout |
+|Proportional Symbol Map |Symbol Map to represent top 20 regions with most movies released |d3. topojson   | map  |
+|Oscar Winners |Tree Graph represents oscar winners from different categories from 2003 - 2011|d3, d3 hierarchy|layout|
+|Movie Set Locations |Location of different movies/tv shows in and around Los Angeles  | d3,mapbox,geojson   | mapboc |
 ## Summary table of visualization forms used
 
 <!-- 🎒 Complete the table . -->
 
 | Type             | Count |
 | ---------------- | ----- |
-| interactive maps | 3     |
-|                  |       |
-|                  |       |
-|                  |       |
-|                  |       |
-|                  |       |
+| Interactive Chart | 4     |
+| Animated Chart   | 1      |
+| Responsive Chart | 4      |
+| D3 Map                  |   1   |
+| Mapbox                  |   1    |
+| D3 Layout                 | 2      |
