@@ -19,7 +19,7 @@ Team members:
 - Proposal: [Project proposal](https://docs.google.com/presentation/d/17FK6inzh8mcIJknUYEwxkjHQZQEqifxKpO76n_ROLDo/edit?usp=sharing)
 - Final presentation: [Transcript](presentation/TRANSCRIPT.md) | [slides](presentation/presentation.pdf)
 - Paper: [Overleaf read-only link](https://www.overleaf.com/read/ksbwncwftsvq) | [PDF](paper/paper.pdf)
-- [Demo link](demo/dist/)
+- App(to clone and run):[Demo](demo/)
 - Video [Transcript](video/TRANSCRIPT.md) | [YouTube link](https://youtu.be/hl5p8Rft0wo)
 
 
