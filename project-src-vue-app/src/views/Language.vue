@@ -1,6 +1,6 @@
 <template>
     <div id = 'app'>
-       
+       <h3>Distribution of movies released by language</h3>
 		<div id='but'>
             <span class="btn" id="dataset1">1950</span>
 			<span class="btn" id="dataset2">1960</span>

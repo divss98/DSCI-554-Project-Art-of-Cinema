@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h2> And the the Oscar goes too....</h2>
+    <h2> And the Oscar goes too....</h2>
     <div id="codepen"></div>
   </div>
 </template>

@@ -7,22 +7,22 @@
       </b-button-group>
       <br><br>
       <b-button-group>
-      <router-link to="/Language"><button class = 'btn'>Language Distribution</button></router-link> <p/>
-      <router-link to="/IntBarAction"><button class = 'btn'>Genre Action</button></router-link> <p/>
-<router-link to="/IntBarComedy"><button class = 'btn'>Genre Comedy</button></router-link><p/>
-      <router-link to="/IntBarAdventure"><button class = 'btn'>Genre Adventure</button></router-link><p/>
+      <router-link to="/Language"><button class = 'btn'>Movie Languages</button></router-link> <p/>
+      <router-link to="/IntBarAction"><button class = 'btn'>Genre: Action</button></router-link> <p/>
+<router-link to="/IntBarComedy"><button class = 'btn'>Genre: Comedy</button></router-link><p/>
+      <router-link to="/IntBarAdventure"><button class = 'btn'>Genre: Adventure</button></router-link><p/>
 </b-button-group>
 <br>
 <br>
 <b-button-group>
-       <router-link to="/MapBox"><button class = 'btn'>Movie Set Locations</button></router-link>  <p/>
+       <router-link to="/MapBox"><button class = 'btn'>Movie/TV Show Set Locations</button></router-link>  <p/>
 
-       <router-link to="/CertificatePie"><button class = 'btn'>Certificate</button></router-link> <p/>
+       <router-link to="/CertificatePie"><button class = 'btn'>Movie Certification</button></router-link> <p/>
 
        <router-link to="/TimeLine"><button class = 'btn'>Movie Eras</button></router-link> <p/>
 
-       <router-link to="/Tree"><button class = 'btn'>Oscar Tree</button></router-link> <p/>
-       <router-link to="/Prop_Symbol_Map"><button class = 'btn'>Proportional Symbol Map</button></router-link> 
+       <router-link to="/Tree"><button class = 'btn'>Oscar Winners</button></router-link> <p/>
+       <router-link to="/Prop_Symbol_Map"><button class = 'btn'>Movie releases over the globe</button></router-link> 
     </b-button-group>
     </div>
     <router-view/>

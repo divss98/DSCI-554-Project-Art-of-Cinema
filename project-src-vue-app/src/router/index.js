@@ -63,14 +63,7 @@ const routes = [
     name: 'Language',
     component: Language
   },
-  {
-    path: '/d3chart',
-    name: 'D3Chart',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/D3Chart.vue')
-  },
+
   
   
 ]

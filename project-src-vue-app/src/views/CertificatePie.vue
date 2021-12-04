@@ -3,7 +3,7 @@
     <br />
     <div class="container" id="chartbuttons">
       <div style="margin-bottom: 2px">
-        <h3>Movie Certificate Pie Chart(2018)</h3>
+        <h3>Movie Certification Distribution</h3>
         <marquee scrollamount="20">
           <img src="../assets/sign.jpg" width="100%" height="150px"
         /></marquee>

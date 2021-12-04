@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div><h3>Top 20 regions with Most movies</h3></div>
+    <div><h3>Top 20 regions with the most movies released</h3></div>
     <svg id="proportional-symbol-map" width="1300" height="700" style="background-color: #eee"></svg>
   </div>
 </template>
