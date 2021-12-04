@@ -1,15 +1,14 @@
 # Final presentation transcript
 
-Topic:
+Topic: The Art of Cinema
 
-Team name:
+Team name: Team RAD
 
 Team members:
 
-- Tommy Trojan <tommy@usc.edu>
--
--
--
+- Rushi Shah <rnshah@usc.edu>
+- Divya Manjunath <divyabha@usc.edu>
+- Aparna Nair <aparnan@usc.edu>
 
 ---
 

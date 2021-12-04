@@ -8,18 +8,17 @@ Team name: Team RAD
 
 Team members:
 
-- Rushi Shan <rnshah@usc.edu>
+- Rushi Shah <rnshah@usc.edu>
 - Divya Manjunath <divyabha@usc.edu>
 - Aparna Nair <aparnan@usc.edu>
--
 
 ## Artifacts
 
 <!-- 🎒 Complete and ensure that all the links work! -->
 
-- [Project proposal]()
+- Proposal: [Project proposal](https://docs.google.com/presentation/d/17FK6inzh8mcIJknUYEwxkjHQZQEqifxKpO76n_ROLDo/edit?usp=sharing)
 - Final presentation: [Transcript](presentation/TRANSCRIPT.md) | [slides](presentation/presentation.pdf)
-- Paper: [Overleaf read-only link](https://www.overleaf.com/read/btvmfhdyrbvk) | [PDF](paper/paper.pdf)
+- Paper: [Overleaf read-only link](https://www.overleaf.com/read/ksbwncwftsvq) | [PDF](paper/paper.pdf)
 - [Demo link](demo/dist/)
 - Video [Transcript](video/TRANSCRIPT.md) | [YouTube link]()
 
@@ -34,41 +33,41 @@ Hence our interface is a one-stop hub for all cinephiles, where they can learn a
 ## Contributions
 
 <!-- 🎒 Complete for each project member. -->
-- Framework implementation and how vue can be integrated with different charts was done by Rushi.
-- Divya found and preprocessed the data from raw data available on the internet to cleaned csv formatted data that can be used for our graphs. In addition to this, she also made searched for appropriate mapbox geojson data.
-- Last but not least, Aparna oversaw the visually appealing implementation of all the charts and how we can provide most information through our website.
+- Rushi: Vue.js framework implmentation and integration of all charts. Created the d3 layout map.
+- Divya: Preprocessing and cleaning of Data. Found appropriate geojson mapbox data. D3 symbol map, interactive bar charts and timeline map were created and implemented.
+- Aparna: Handled colour scheme and UI of the app . Made the animated bar chart.
+
+All the other charts were equally divided amongst all of us and we created them individually. We later merged and integrated them into our Vue App. Documentation was also divided amongst the three.
+
 
 ## Proposal presentation
 
-[Tommy Trojan](mailto:tommy@usc.edu)
-
 - Divya designed the presentation and created the intro slides 
-- Aparna was responsible for researching for interesting visuals for the proposal presentation and created data preprocessing and visulizations slides.
-- Rushi was responsible for searching for appropriate frameworks and creating time line and team slides.
+- Aparna was responsible for researching for interesting visuals for the proposal presentation and oversaw tbe literature review.
+- Rushi was responsible for searching for appropriate frameworks and creating time line.
 
 ## Final presentation
 
-[Tommy Trojan](mailto:tommy@usc.edu)
-
-- Divya created the slides regarding data preprocessing and the framework and systems used in the demo.
-- Aparna created the slides which were showing the different aspects of the web application and various charts
-- Rushi created the slides about the motivation of the project and the intro slides.
+- Rushi created/presented the slides about the idea,motivation and introduction of the project.
+- Aparna created/presented the slides about previous work done, the data and originality of the project.
+- Divya created/presented the slides regarding design methodology, D3 charts and future scope of the project.
 
 ## Paper
 
-[Tommy Trojan](mailto:tommy@usc.edu)
 
-- Divya wrote the Introduction and Data Section as she was most familiar with data used.
-- Aparna was responsible for writing Abstract and conclusion as well as Related Work section
+- Divya wrote the Introduction and Data Section as she was most familiar with data used. SHe also highlighted the main features in the app.
+- Aparna was responsible for writing the Related Work section and general formatting of the paper.
 - Rushi handled the System and Design Approaches in the paper.
 
 ## Demo
 
 [Tommy Trojan](mailto:tommy@usc.edu)
 
-- Divya was responsible for D3 layout and Mapbox map as well as making charts simple and full of information for naive users.
-- Aparna handled Responsive and interactive charts and researched for background colors, and images which could make our website interesting.
-- Rushi implmented the framework and dealt with Animated Chart and Proportional Symbol map chart
+- Divya was responsible for D3 layout and Mapbox map as well aggregating the data for smooth implementation of all charts.
+- Aparna handled the  Animated chart and researched for background colors, and images which could make our website interesting. She handled the UI.
+- Rushi implemented the framework and dealt with Interactive Pie and Proportional Symbol map chart.
+
+The three of us split the creation of charts amongst ourselves and constantly tested it on our Web app to make sure its running as expected.
 
 # Visualizations created in the Demo
 
