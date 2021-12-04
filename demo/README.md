@@ -1,8 +1,9 @@
-# vue-app
+# Running Project
 
 ## Project setup
 ```
 npm install
+npm install d3-milestones
 ```
 
 ### Compiles and hot-reloads for development
